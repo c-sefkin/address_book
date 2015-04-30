@@ -1,0 +1,10 @@
+<h3>Here are all the phone numbers for this contact:</h3>
+
+<ul>
+  <% @contact.phones().each() do |phone| %>
+  <li><a href="/all_phone_numbers/<%= phone.id() %>"><%= phone.phones()%></a></li>
+  <% end %>
+</ul>
+
+<a href="/all_phone_numbers/<%= @contact.id%>/all_phone_numbers/new">Add a new phone number</a>
+<a href="/">Return to Main Page</a>

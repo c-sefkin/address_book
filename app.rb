@@ -39,7 +39,7 @@ post('/all_phone_numbers') do
   area_code = params.fetch('area_code')
   phone_number = params.fetch('phone_number')
   type = params.fetch('type')
-  @phone_number = Phone.new(area_code, phone_number, type)
+  @phone_number = Phone.new(:area_code => area_code, :phone_number => phone_number, :type => type)
   @phone_number.save()
   @contact = Contact.find(params.fetch('contact_id'))
   @contact.add_phone(@phone_number)
