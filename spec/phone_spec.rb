@@ -51,5 +51,13 @@ describe(Phone) do
     end
   end
 
+  # describe('.find') do
+  #   it('finds a contact based on phone number') do
+  #     test_phone_number = Phone.new({:area_code => "503", :phone_number => "888-8888", :type => "cell"})
+  #     test_phone_number.save()
+  #     test_phone_number_2 = Phone.new({:area_code => "503", :phone_number => "888-1234", :type => "home"})
+  #     test_phone_number_2.save()
+  #     expect(Phone.find())
+
 
 end

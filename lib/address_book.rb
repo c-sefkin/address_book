@@ -6,6 +6,7 @@ class Contact
     @first_name = attributes.fetch(:first_name)
     @last_name = attributes.fetch(:last_name)
     @birthday = attributes.fetch(:birthday)
+    @id = attributes.fetch(:last_name)
   end
 
   define_singleton_method(:all) do
@@ -19,5 +20,15 @@ class Contact
   define_singleton_method(:clear) do
     @@all_contact = []
   end
+
+  define_method(:id) do
+    @id
+  end
+
+  # define_method(:id) do |identification|
+  #   found_person = nil
+  #   @@all_contact.each() do |last_name|
+  #     if last_name.id().eql?(identification)
+  #       found_person =
 
 end

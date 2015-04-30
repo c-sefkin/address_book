@@ -50,6 +50,15 @@ describe(Contact) do
     end
   end
 
+  describe("#id") do
+    it("return the information of contact by first name") do
+      test_name = Contact.new({:first_name => "Chris", :last_name => "Sefkin", :birthday => "08/08/83"})
+      test_name.save()
+      expect(test_name.id()).to(eq("Sefkin"))
+    end
+  end
+
+
 
 
 
