@@ -4,6 +4,10 @@ require('phone')
 
 describe(Phone) do
 
+  # before() do
+  #   Phone.clear()
+  # end
+
   describe('#area_code') do
     it('will allow user to save an area code') do
       test_phone_number = Phone.new({:area_code => "503", :phone_number => "888-8888", :type => "cell"})
@@ -31,7 +35,17 @@ describe(Phone) do
     end
   end
 
+  describe('#save') do
+    it('will allow user to save phone numbers') do
+      test_phone_number = Phone.new({:area_code => "503", :phone_number => "888-8888", :type => "cell"})
+      test_phone_number.save()
+      expect(Phone.all()).to(eq([test_phone_number]))
+    end
+  end
 
+  # describe('.clear') do
+  #   it('clear all values from the phone list') do
+  #     expect(Phone.clear()).to(eq([]))
 
 
 end
