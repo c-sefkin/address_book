@@ -18,6 +18,14 @@ describe(Phone) do
     end
   end
 
+  describe('#type') do
+    it('will allow the user to enter a phone number type') do
+      test_phone_number = Phone.new({:area_code => "503", :phone_number => "888-8888", :type => "cell"})
+      expect(test_phone_number.type()).to(eq("cell"))
+    end
+  end
+
+
 
 
 end
