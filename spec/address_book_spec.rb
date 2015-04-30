@@ -21,5 +21,12 @@ describe(Contact) do
     end
   end
 
+  describe('#birthday') do
+    it('will allow for the entry of a birthday') do
+      test_name = Contact.new({:first_name => "Chris", :last_name => "Sefkin", :birthday => "08/08/83"})
+      expect(test_name.birthday()).to(eq("08/08/83"))
+    end
+  end
+
 
 end
