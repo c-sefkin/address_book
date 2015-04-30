@@ -25,6 +25,12 @@ describe(Phone) do
     end
   end
 
+  describe('.all') do
+    it('will create method do look at all phone numbers') do
+      expect(Phone.all()).to(eq([]))
+    end
+  end
+
 
 
 
