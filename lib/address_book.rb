@@ -40,4 +40,8 @@ class Contact
     @phones
   end
 
+  define_method(:add_phone) do |phone_number|
+    @phones.push(phone_number)
+  end
+
 end

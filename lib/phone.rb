@@ -23,9 +23,4 @@ class Phone
   end
 
 
-
-  # define_method(:add_phone) do
-  #   @add_phone
-  # end
-
 end
