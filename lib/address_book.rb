@@ -7,6 +7,7 @@ class Contact
     @last_name = attributes.fetch(:last_name)
     @birthday = attributes.fetch(:birthday)
     @id = attributes.fetch(:last_name)
+    @phones =[]
   end
 
   define_singleton_method(:all) do
@@ -33,6 +34,10 @@ class Contact
       end
     end
     found_person
+  end
+
+  define_method(:phones) do
+    @phones
   end
 
 end

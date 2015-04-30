@@ -59,7 +59,7 @@ describe(Contact) do
   end
 
   describe('.find') do
-    it('will find contact information from alst name') do
+    it('will find contact information from last name') do
       test_name = Contact.new({:first_name => "Chris", :last_name => "Sefkin", :birthday => "08/08/83"})
       test_name.save()
       test_name2 = Contact.new({:first_name => "Ian", :last_name => "Bevel", :birthday => "06/15/84"})
@@ -67,9 +67,13 @@ describe(Contact) do
       expect(Contact.find(test_name.id())).to(eq(test_name))
     end
   end
-
-
-
+  
+  describe('#phones') do
+    it('initially returns an empty array of phone numbers for contact') do
+      test_name = Contact.new({:first_name => "Chris", :last_name => "Sefkin", :birthday => "08/08/83"})
+      expect(test_name.phones()).to(eq([]))
+    end
+  end
 
 
 

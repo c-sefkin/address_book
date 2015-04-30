@@ -3,6 +3,7 @@ class Phone
 
   @@all_phone = []
 
+
   define_method(:initialize) do |attributes|
     @area_code = attributes.fetch(:area_code)
     @phone_number = attributes.fetch(:phone_number)
@@ -20,5 +21,11 @@ class Phone
   define_singleton_method(:clear) do
     @@all_phone = []
   end
+
+
+
+  # define_method(:add_phone) do
+  #   @add_phone
+  # end
 
 end
