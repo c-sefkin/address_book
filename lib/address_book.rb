@@ -9,10 +9,11 @@ class Contact
   end
 
   define_singleton_method(:all) do
-    @@all_contact = []
+    @@all_contact
   end
 
-  # define_method(:save) do
-  #   @@all_contact.push(self)
-  # end
+  define_method(:save) do
+    @@all_contact.push(self)
+  end
+
 end

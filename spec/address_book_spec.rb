@@ -34,13 +34,14 @@ describe(Contact) do
     end
   end
 
+  describe('#save') do
+    it('will allow the user to store contact information') do
+      test_name = Contact.new({:first_name => "Chris", :last_name => "Sefkin", :birthday => "08/08/83"})
+      test_name.save()
+      expect(Contact.all()).to(eq([test_name]))
+    end
+  end
 
-#   describe('#save') do
-#     it('will allow the user to store contact information') do
-#       test_name = Contact.new({:first_name => "Chris", :last_name => "Sefkin", :birthday => "08/08/83"})
-#       test_name.save()
-#       expect(
-#
-#
-#
+
+
  end
