@@ -28,5 +28,19 @@ describe(Contact) do
     end
   end
 
+  describe('.all') do
+    it('will allow to start with an empty array') do
+      expect(Contact.all()).to(eq([]))
+    end
+  end
 
-end
+
+#   describe('#save') do
+#     it('will allow the user to store contact information') do
+#       test_name = Contact.new({:first_name => "Chris", :last_name => "Sefkin", :birthday => "08/08/83"})
+#       test_name.save()
+#       expect(
+#
+#
+#
+ end
