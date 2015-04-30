@@ -25,10 +25,14 @@ class Contact
     @id
   end
 
-  # define_method(:id) do |identification|
-  #   found_person = nil
-  #   @@all_contact.each() do |last_name|
-  #     if last_name.id().eql?(identification)
-  #       found_person =
+  define_singleton_method(:find) do |identification|
+    found_person = nil
+    @@all_contact.each() do |person|
+      if person.id().eql?(identification)
+        found_person = person
+      end
+    end
+    found_person
+  end
 
 end

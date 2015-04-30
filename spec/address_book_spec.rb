@@ -58,6 +58,18 @@ describe(Contact) do
     end
   end
 
+  describe('.find') do
+    it('will find contact information from alst name') do
+      test_name = Contact.new({:first_name => "Chris", :last_name => "Sefkin", :birthday => "08/08/83"})
+      test_name.save()
+      test_name2 = Contact.new({:first_name => "Ian", :last_name => "Bevel", :birthday => "06/15/84"})
+      test_name2.save()
+      expect(Contact.find(test_name.id())).to(eq(test_name))
+    end
+  end
+
+
+
 
 
 
