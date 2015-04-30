@@ -3,9 +3,9 @@ require ('address_book')
 
 describe(Contact) do
 
-  # before() do
-  #   Contact.clear()
-  # end
+  before() do
+    Contact.clear()
+  end
 
   describe('#first_name') do
     it('will allow for entry of contact first name') do
@@ -41,6 +41,15 @@ describe(Contact) do
       expect(Contact.all()).to(eq([test_name]))
     end
   end
+
+  describe('.clear') do
+    it('will allow for clearing of all values') do
+      test_name = Contact.new({:first_name => "Chris", :last_name => "Sefkin", :birthday => "08/08/83"})
+      test_name.save()
+      expect(Contact.clear()).to(eq([]))
+    end
+  end
+
 
 
 

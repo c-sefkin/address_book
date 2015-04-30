@@ -16,4 +16,8 @@ class Contact
     @@all_contact.push(self)
   end
 
+  define_singleton_method(:clear) do
+    @@all_contact = []
+  end
+
 end
