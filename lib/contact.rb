@@ -1,14 +1,22 @@
 class Contact
-  attr_reader(:first_name, :last_name, :birthday)
+  # attr_reader(:first_name, :last_name, :birthday)
   @@all_contact = []
 
-  define_method(:initialize) do |attributes|
-    @first_name = attributes.fetch(:first_name)
-    @last_name = attributes.fetch(:last_name)
-    @birthday = attributes.fetch(:birthday)
-    @id = attributes.fetch(:last_name)
-    @phones =[]
-  end
+  # define_method(:initialize) do |attributes|
+  #   @first_name = attributes.fetch(:first_name)
+  #   @last_name = attributes.fetch(:last_name)
+  #   @birthday = attributes.fetch(:birthday)
+  #   @id = attributes.fetch(:last_name)
+  #   @full_name = (@first_name).+(" ").+(@last_name)
+  #   @phones =[]
+  # end
+
+  define_method(:initialize) do |first_name, last_name, birthday|
+    @first_name = first_name
+    @last_name = last-name
+    @birthday = birthday
+    @id = @@all_contact
+    @phones = []
 
   define_singleton_method(:all) do
     @@all_contact
@@ -42,6 +50,10 @@ class Contact
 
   define_method(:add_phone) do |phone_number|
     @phones.push(phone_number)
+  end
+
+  define_method(:full_name) do
+    @full_name
   end
 
 end

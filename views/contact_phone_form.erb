@@ -1,0 +1,16 @@
+<h1>Add a phone number to <%= @contact.full_name() %> </h1>
+
+<form action="/all_phone_numbers" method="post">
+  <input id="contact_id" name = "contact_id" type = "hidden" value = "<%= @contact.id() %>">
+
+  <label for= "area_code">Area code:</label>
+  <input id= "area_code" name = "area_code" type = "text">
+
+  <label for= "phone_number">phone_number:</label>
+  <input id= "phone_number" name = "phone_number" type = "text">
+
+  <label for= "type">Type (cell, home, etc):</label>
+  <input id= "type" name = "type" type = "text">
+
+  <button type = "submit">Add Phone Number</button>
+</form>

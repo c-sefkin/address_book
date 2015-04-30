@@ -1,5 +1,5 @@
 require ('rspec')
-require ('address_book')
+require ('contact')
 
 describe(Contact) do
 
@@ -83,7 +83,5 @@ describe(Contact) do
       expect(test_name.phones()).to(eq([test_phone_number]))
     end
   end
-
-
 
  end

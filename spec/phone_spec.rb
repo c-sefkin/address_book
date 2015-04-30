@@ -1,5 +1,5 @@
 require('rspec')
-require('address_book')
+require('contact')
 require('phone')
 
 describe(Phone) do
